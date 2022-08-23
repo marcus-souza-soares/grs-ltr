@@ -13,6 +13,10 @@ const Form = styled(ReactMailForm)`
   text-align: center;
   position: absolute;
   z-index: 5;
+  background-color: #2b2c31e4;
+  padding: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 7px;
 
   input,
   textarea {
