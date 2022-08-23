@@ -12,16 +12,29 @@ import Form from "./components/Form";
 function App() {
   const [overlay, setOverlay] = useState(false);
   const whatsUrl =
-    "https://wa.me/+5573999687478?text=Olá, gostaria de conversar sobre meu projeto, com você.";
+    "https://wa.me/+5573999687478?text=Olá, gostaria de conversar sobre meu projeto.";
   return (
     <div className="App">
       <GlobalStyles />
       <Container>
-        <span style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
-        <div className="border-profile">
-          <Profile background_profile={profile}></Profile>
-        </div>
-        <h1 style={{color: "#fff", marginTop:"20px", fontSize:"25px"}}>Gabriel Ribeiro de Souza</h1>
+        <span
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div className="border-profile">
+            <Profile background_profile={profile}></Profile>
+          </div>
+          <span className="text">
+            <h1 style={{ color: "#fff", fontSize: "25px" }}>
+              Gabriel Ribeiro de Souza
+            </h1>
+            <h3 style={{ color: "#c4b8b8", textAlign: "center" }}>
+              Designer de Interiores e Exteriores
+            </h3>
+          </span>
         </span>
 
         <div className="buttons">
@@ -35,8 +48,12 @@ function App() {
               WhatsApp &nbsp; <RiWhatsappFill style={{ color: "#09b030" }} />
             </Button>
           </a>
-          {overlay ? <Form to="gabrielgrs2912003grs@gmail.com" className="email_form" /> : ""}
-          <Overlay status={overlay} onClick={() => setOverlay(false)}/>
+          {overlay ? (
+            <Form to="gabrielgrs2912003grs@gmail.com" className="email_form" />
+          ) : (
+            ""
+          )}
+          <Overlay status={overlay} onClick={() => setOverlay(false)} />
           <span onClick={() => setOverlay(true)} style={{ width: "100%" }}>
             <Button>
               Email &nbsp; <FaTelegramPlane style={{ color: "#1c75d4" }} />
@@ -54,14 +71,13 @@ const Container = styled.div`
   position: relative;
   width: 500px;
   height: 500px;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background: rgba(15, 15, 15, 0.6);
   border-radius: 10px;
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   margin: 0 5px;
 
   .border-profile {
@@ -72,9 +88,15 @@ const Container = styled.div`
     justify-content: center;
     border-radius: 50%;
     background: #fff;
+    margin-bottom: 20px;
   }
   .buttons {
     width: 100%;
+  }
+  .text{
+    background-color: #4b4a4a4e;
+    padding: 20px;
+    border-radius: 15px;
   }
 `;
 
