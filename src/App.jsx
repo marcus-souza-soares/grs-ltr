@@ -21,7 +21,7 @@ function App() {
         <div className="border-profile">
           <Profile background_profile={profile}></Profile>
         </div>
-        <h1 style={{color: "#fff", marginTop:"20px", fontSize:"30px"}}>Gabriel Ribeiro de Souza</h1>
+        <h1 style={{color: "#fff", marginTop:"20px", fontSize:"25px"}}>Gabriel Ribeiro de Souza</h1>
         </span>
 
         <div className="buttons">
