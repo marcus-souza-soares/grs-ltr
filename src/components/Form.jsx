@@ -4,12 +4,11 @@ import ReactMailForm from "react-mail-form";
 
 const Form = styled(ReactMailForm)`
   margin: auto;
-  top: 200px;
+  height: auto;
+  top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   max-width: 720px;
-  min-height: 80vh;
   font-size: 14px;
   text-align: center;
   position: absolute;
@@ -31,6 +30,7 @@ const Form = styled(ReactMailForm)`
   }
   textarea {
     padding: 6px;
+    margin-bottom: 70px;
   }
   a {
     display: block;
