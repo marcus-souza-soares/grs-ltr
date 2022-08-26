@@ -81,14 +81,19 @@ const Container = styled.div`
   margin: 0 5px;
 
   .border-profile {
-    width: 75px;
-    height: 75px;
+    width: 150px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 15px;
     background: #fff;
     margin-bottom: 20px;
+    @media screen and (max-width: 600px){
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+    }
   }
   .buttons {
     width: 100%;
@@ -101,13 +106,21 @@ const Container = styled.div`
 `;
 
 const Profile = styled.div`
-  width: 70px;
-  height: 70px;
+  width: 93%;
+  height: 93%;
+  margin: 0 auto;
   background-image: ${(props) => `url(${props.background_profile})`};
-  background-size: 90px;
+  background-size: 160px;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 50%;
+  border-radius: 8px;
+
+  @media screen and (max-width: 600px){
+    width: 70px;
+    height: 70px;
+    background-size: 90px;
+    border-radius: 50%;
+  }
 `;
 const Overlay = styled.div`
   z-index: 1;
