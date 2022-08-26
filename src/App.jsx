@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GlobalStyles } from "./GlobalStyled";
 import "./App.css";
-import profile from "./imgs/269880537_597220618044253_8746544439028149771_n.jpg";
+import profile from "./imgs/banner.jpeg";
 import Button from "./components/Button";
 import { FaTelegramPlane } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -104,7 +104,7 @@ const Profile = styled.div`
   width: 70px;
   height: 70px;
   background-image: ${(props) => `url(${props.background_profile})`};
-  background-size: 70px;
+  background-size: 90px;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
